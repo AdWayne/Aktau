@@ -1,0 +1,227 @@
+html {
+    scroll-behavior: smooth; /* Добавляем плавный скроллинг */
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #0077b6, #90e0ef);
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Секция Hero */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Высота 80% от экрана */
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Контент вертикально */
+    justify-content: center; /* Центрирование по вертикали */
+    align-items: center;
+    margin-top: -10px;
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Покрывает весь экран */
+    z-index: -1; /* Размещает видео за контентом */
+  }
+  
+  h1, p, .btn {
+    position: relative;
+    z-index: 1; /* Поверх видео */
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+  }
+  
+  p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  
+  .btn {
+    padding: 15px 25px;
+    background-color: #ffffff;
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1em;
+  }
+  
+  .btn:hover {
+    background-color: #90e0ef;
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Галерея изображений */
+  .image-gallery {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; /* Позволяет перенос строк для изображений */
+    gap: 20px; /* Отступы между изображениями */
+    justify-content: center; /* Центрирование изображений */
+  }
+  
+  .suret {
+    height: 300px;
+    width: 350px;
+    margin: 10px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transform: translateY(100px); /* Исходное положение для анимации */
+    opacity: 0; /* Невидимо перед анимацией */
+    transition: transform 1s ease, opacity 1s ease; /* Анимация появления */
+  }
+  
+  .suret.visible {
+    transform: translateY(0); /* Конечное положение */
+    opacity: 1; /* Делаем изображение видимым */
+  }
+  
+  /* Эффекты при наведении на изображение */
+  .suret:hover {
+    transform: scale(1.1); /* Увеличение изображения */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .alt-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Таблицы */
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  th {
+    background: #0077b6;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  td {
+    color: #fff;
+  }
+  
+  /* Формы */
+  form {
+    margin: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #0077b6;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #0077b6;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+
+  .map-container {
+    width: 45%;
+    height: 400px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2em;
+    }
+  
+    p {
+      font-size: 1em;
+    }
+  
+    .btn {
+      padding: 12px 20px;
+    }
+  
+    .image-gallery {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .suret {
+      height: 200px;
+      width: 250px;
+    }
+  
+    .hero {
+      height: 50vh;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .background-video {
+      object-position: center center;
+    }
+  }
+  
+  @media (min-width: 1880px) {
+    .background-video {
+      object-fit: contain;
+    }
+  }
+  
