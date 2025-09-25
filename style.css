@@ -1,5 +1,5 @@
 html {
-    scroll-behavior: smooth; /* Добавляем плавный скроллинг */
+    scroll-behavior: smooth;
   }
   
   body {
@@ -16,17 +16,16 @@ html {
     justify-content: center;
   }
   
-  /* Секция Hero */
   .hero {
     position: relative;
     width: 100%;
-    height: 80vh; /* Высота 80% от экрана */
+    height: 80vh;
     overflow: hidden;
     color: white;
     text-align: center;
     display: flex;
-    flex-direction: column; /* Контент вертикально */
-    justify-content: center; /* Центрирование по вертикали */
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-top: -10px;
   }
@@ -37,13 +36,13 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Покрывает весь экран */
-    z-index: -1; /* Размещает видео за контентом */
+    object-fit: cover;
+    z-index: -1;
   }
   
   h1, p, .btn {
     position: relative;
-    z-index: 1; /* Поверх видео */
+    z-index: 1;
   }
   
   h1 {
@@ -77,13 +76,12 @@ html {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   }
   
-  /* Галерея изображений */
   .image-gallery {
     position: relative;
     display: flex;
-    flex-wrap: wrap; /* Позволяет перенос строк для изображений */
-    gap: 20px; /* Отступы между изображениями */
-    justify-content: center; /* Центрирование изображений */
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center;
   }
   
   .suret {
@@ -93,19 +91,18 @@ html {
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     position: relative;
-    transform: translateY(100px); /* Исходное положение для анимации */
-    opacity: 0; /* Невидимо перед анимацией */
-    transition: transform 1s ease, opacity 1s ease; /* Анимация появления */
+    transform: translateY(100px);
+    opacity: 0; 
+    transition: transform 1s ease, opacity 1s ease;
   }
   
   .suret.visible {
-    transform: translateY(0); /* Конечное положение */
-    opacity: 1; /* Делаем изображение видимым */
+    transform: translateY(0); 
+    opacity: 1; 
   }
   
-  /* Эффекты при наведении на изображение */
   .suret:hover {
-    transform: scale(1.1); /* Увеличение изображения */
+    transform: scale(1.1); 
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -123,7 +120,6 @@ html {
     font-weight: bold;
   }
   
-  /* Таблицы */
   table {
     width: 80%;
     margin: 20px auto;
@@ -148,7 +144,6 @@ html {
     color: #fff;
   }
   
-  /* Формы */
   form {
     margin: 20px;
     padding: 20px;
@@ -184,7 +179,6 @@ html {
     border-radius: 10px;
   }
   
-  /* Адаптивность */
   @media (max-width: 768px) {
     h1 {
       font-size: 2em;
@@ -224,4 +218,5 @@ html {
       object-fit: contain;
     }
   }
+
   
